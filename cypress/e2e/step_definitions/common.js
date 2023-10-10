@@ -54,7 +54,6 @@ Then("the number of replies is greater that {string}", (value) => {
             hrefArr.forEach((href, index) => {
               cy.log(`${href}`);
             });
-            
           });
     });
   });
