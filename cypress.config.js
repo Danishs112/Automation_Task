@@ -22,5 +22,7 @@ module.exports = defineConfig({
     specPattern: "cypress/e2e/features/*.feature",
     baseUrl: "https://support.google.com/",
     chromeWebSecurity: false,
+    viewportHeight: 900,
+    viewportWidth: 1440,
   },
 });
