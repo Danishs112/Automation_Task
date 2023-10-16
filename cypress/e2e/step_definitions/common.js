@@ -26,6 +26,11 @@ When("I click on the {string} button", async(button) => {
     element.click();
 });
 
+When('I click on the {string} button on the thread page',async(button) => {
+    const element = page.getViewMoreButton().contains(button);
+    element.click();
+});
+
 Then("the number of replies is greater that {string}", (value) => {
     const thresholdValue = parseInt(value);
     const hrefLinks = [];
@@ -50,6 +55,7 @@ Then("the number of replies is greater that {string}", (value) => {
         }
       });
     }).then(() => {
+        cy.log("count########################", hrefLinks.length)
         Promise.all(hrefLinks).then(hrefArr => {
             hrefArr.forEach((href, index) => {
               cy.log(`${href}`);

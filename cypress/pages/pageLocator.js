@@ -16,6 +16,10 @@ class PageLocators {
     getThreadReplyCount(){
       return cy.get('div.material-card a span.thread-list-counts__count--reply')
     }
+
+    getViewMoreButton(){
+      return cy.get('[data-stats-id="load-more-button"]')
+    }
   }
   
   export default PageLocators;
